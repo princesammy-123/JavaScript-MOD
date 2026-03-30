@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 10</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-10 max-w-md">
+    <h1 id="title" class="text-3xl font-bold text-gray-800 mb-3">
+      Placeholder Title
+    </h1>
+
+    <p id="description" class="text-sm mb-4 text-gray-400">
+      This is a placeholder description that should be updated.
+    </p>
+
+    <img
+      id="banner"
+      src="https://picsum.photos/seed/before/600/200"
+      alt="Before"
+      class="rounded-xl shadow w-full mb-4"
+    />
+
+    <a id="link" href="#" class="text-blue-500 underline text-sm">
+      Click here
+    </a>
+
+    <script>
+      let title = document.getElementById("title");
+      title.textContent = "DOM Manipulation is Powerful";
+
+      let description = document.getElementById("description");
+      description.textContent =
+        "This content was set by JavaScript on page load.";
+      description.classList.remove("text-gray-400");
+      description.classList.add("text-gray-600");
+
+      let banner = document.getElementById("banner");
+      banner.src = "https://picsum.photos/seed/after/600/200";
+      banner.alt = "After";
+
+      let link = document.getElementById("link");
+      link.href = "https://developer.mozilla.org";
+      link.textContent = "Visit MDN Docs";
+    </script>
+  </body>
+</html>
